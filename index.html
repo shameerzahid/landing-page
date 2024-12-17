@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Bitcoin</title>
+  </head>
+  <style>
+   .logo-container {
+  width: 100%;
+  overflow: hidden;
+  /* background: #fff; */
+  padding: 20px 0;
+}
+
+.scroll-container {
+  display: flex;
+  overflow: hidden;
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.logo-row {
+  display: flex;
+  gap: 8px;
+  padding-left: 20px;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+}
+
+.logo-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid white;
+  /* padding: 10px; */
+  /* min-width: 100px; */
+}
+
+.logo-size {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.logo-name {
+  /* margin-top: 5px; */
+  font-size: 14px;
+  color: #666;
+}
+
+.fast-scroll {
+  animation-duration: 24s;
+}
+
+.slow-scroll {
+  animation-duration: 50s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(calc(-100% / 3));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo-size {
+  width: 14px !important;
+  height: 14px !important;
+  object-fit: contain;
+}
+
+.logo-name {
+  /* margin-top: 5px; */
+  font-size: 8px !important;
+  color: #666;
+}
+}
+  </style>
+   <script>
+    function setupInfiniteScroll() {
+      const rows = document.querySelectorAll('.logo-row');
+      
+      rows.forEach(row => {
+        // When animation ends, instantly reset to start
+        row.addEventListener('animationend', () => {
+          row.style.animation = 'none';
+          row.offsetHeight; // Trigger reflow
+          row.style.animation = null;
+        });
+      });
+    }
+
+    setupInfiniteScroll();
+  </script>
+  <body>
+    <script>
+      function setupInfiniteScroll() {
+        const rows = document.querySelectorAll('.logo-row');
+        
+        rows.forEach(row => {
+          row.addEventListener('animationend', () => {
+            row.style.animation = 'none';
+            row.offsetHeight; // Trigger reflow
+            row.style.animation = null;
+          });
+        });
+      }
+  
+      setupInfiniteScroll();
+    </script>
+    <!-- Navbar -->
+    <nav class="navbar-container">
+      <div class="container">
+        <div class="navbar">
+          <div class="menu">
+            <img src="/assets/logo.webp" alt="" class="logo" />
+            <!-- <img src="/assets/cross.png" alt="" class="hidden" /> -->
+
+            <ul class="nav-list">
+              <li><a href="#Palvelut">Palvelut</a></li>
+              <li><a href="#Miksi Kvarn">Miksi Kvarn?</a></li>
+              <li><a href="#Opi ja oivalla">Opi ja oivalla</a></li>
+              <li><a href="#Yritys">Yritys</a></li>
+              <li><a href="#Tuki">Tuki</a></li>
+            </ul>
+            <ul class="btn-menu nav-list">
+              <li><a href="#FI">FI</a></li>
+              <button class="btn btn-gray">Kirjaudu</button>
+              <button class="btn btn-green">Luo tili</button>
+            </ul>
+          </div>
+
+          <div class="hamburger nav-mobile" onclick="toggleMenu()">
+            <img src="/assets/logo.webp" alt="" class="logo" />
+            <img src="/assets/toggle.png" alt="" class="toggle" />
+            <img src="/assets/cross.png" alt="" class="hidden" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div
+          class="flex-row"
+          data-aos="fade-up"
+          data-aos-delay="3"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
+          <div class="hero-image-wrap">
+            <img src="/assets/heroImage.webp" alt="" class="hero-image" />
+          </div>
+          <div class="hero-content">
+            <h1>
+              <strong>Bitcoin</strong> helposti ja turvallisesti – osta ja myy
+              Bitcoinia suomalaisella Kvarn X:llä
+            </h1>
+            <p>
+              Aloita bitcoin-sijoittaminen ja liity tuhansien käyttäjien
+              joukkoon, jotka sijoittavat Bitcoiniin ja kryptoihin
+              palvelussamme.
+              <strong>Välityspalkkiomme on Suomen matalin</strong> ja
+              rekisteröityminen pankkitunnuksilla on nopeaa ja ilmaista.
+            </p>
+            <button
+              class="btn btn-primary"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Avaa ilmainen tili!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section B -->
+    <section class="sectionB">
+      <div class="container">
+        <div class="flex-row">
+          <div class="sectionB-content">
+            <h4
+              class="sectionB-heading"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Miksi kvarn X?
+            </h4>
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Bitcoin-sijoittajan luotettava kumppani
+            </h1>
+            <button class="btn btn-primary">Avaa ilmainen tili tästä</button>
+            <span
+              class="sectionb-list flex-row gap"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <img src="/assets/icon.svg" alt="" />
+              <h5>Katso esittelyvideo</h5>
+            </span>
+            <div
+              class="faq"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <!-- question 1 -->
+              <div class="sectionH-FAQ">
+                <div class="sectionH-FAQ-header">
+                  <h4>Säännelty Finanssivalvonnan alainen toimija</h4>
+                  <div class="plus-wrap">+</div>
+                  <div class="minus-wrap">-</div>
+                </div>
+                <div>
+                  <ul class="para-small sectionH-answer">
+                    <li>
+                      Olemme Suomen Finanssivalvonnan (FIN-FSA) rekisteröimä
+                      säännelty virtuaalivaluutan tarjoaja (VASP)
+                      sähkörahayhteisö (EMI)
+                    </li>
+                    <li>Sääntelynmukainen asiakasvarojen eriytys</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- question 2 -->
+              <div class="sectionH-FAQ">
+                <div class="sectionH-FAQ-header">
+                  <h4>Turvallinen insituutiotason varojen säilytys</h4>
+                  <div class="plus-wrap">+</div>
+                  <div class="minus-wrap">-</div>
+                </div>
+                <div>
+                  <ul class="para-small sectionH-answer">
+                    <li>
+                      Turvallinen instituutiotason kryptovarojen säilytys
+                      (Multi-layer security)
+                    </li>
+                    <li>
+                      Jatkuva, reaaliaikainen ja sääntelynmukainen valvonta
+                      epäilyttävän toiminnan varalta
+                    </li>
+                    <li>
+                      Turvallinen ja nopea sisäänkirjautuminen pankkitunnuksin
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- question 3 -->
+              <div class="sectionH-FAQ">
+                <div class="sectionH-FAQ-header">
+                  <h4>Edullinen ja läpinäkyvä hinnoittelu</h4>
+                  <div class="plus-wrap">+</div>
+                  <div class="minus-wrap">-</div>
+                </div>
+                <div>
+                  <ul class="para-small sectionH-answer">
+                    <li>Kaupankäyntikulu alkaen 0,4% (min. 1 €)</li>
+                    <li>
+                      Maksat kaupankäynnistä ainoastaan volyymiin perustuvan
+                      kaupankäyntikulun, ei muita kuluja
+                    </li>
+                    <li>Ei säilytys- tai tilinhoitomaksuja</li>
+                    <li>Maksuttomat vero- ja kirjanpitoraportit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sectionB-image-wrap"
+            data-aos="fade-up"
+            data-aos-delay="3"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="/assets/image1.webp" alt="" class="hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section C -->
+    <section class="sectionC">
+      <div class="container">
+        <div class="flex-row">
+          <div class="pricing-card">
+            <div class="pricing-item-wrap">
+              <div class="sectionC-image-wrap">
+                <img src="/assets/price.webp" alt="" class="pricing-image" />
+                <div>
+                  <ul class="pricing-list">
+                    <li class="pricing-list-items">Minimikulu 1 €</li>
+                    <li class="pricing-list-items">Tilinhoitomaksu 0 €</li>
+                    <li class="pricing-list-items">Fiat-talletukset 0 €</li>
+                    <li class="pricing-list-items">
+                      Kryptovarojen säilytys 0 €
+                    </li>
+                  </ul>
+                  <button class="btn btn-primary">
+                    Luo tili ja lunasta edut
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scetionC-contentwrap">
+            <div class="sectionC-content">
+              <h4 class="sectionC-heading">BITCOIN- JA KRYPTOHINNASTO</h4>
+              <h1>Suomen alhaisimmat kaupankäyntikulut</h1>
+              <p>
+                Tarjoamme suomen halvimmat kaupankäyntikulut, matalat spreadit
+                ja läpinäkyvän hinnoittelun. Aloita Bitcoin- ja
+                kryptosijoittaminen rekisteröitymällä ilmaiseksi.
+              </p>
+            </div>
+
+            <div class="pricing-plan">
+              <div class="flex-row">
+                <!-- Pricing 1 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>Institutional</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,1%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi yli 20 000 000 euroa edeltävän 90
+                      päivän aikana.
+                    </p>
+                  </div>
+                </div>
+                <!-- Pricing 2 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>Professional</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,2%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi 5 000 001 - 20 000 000 euroa edeltävän
+                      90 päivän aikana.
+                    </p>
+                  </div>
+                </div>
+                <!-- Pricing 3 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>VIP</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,3%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi 500 001 - 5 000 000 euroa edeltävän 90
+                      päivän aikana.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-row">
+                <!-- Pricing 1 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>Taso 1</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,4%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi 100 001 - 500 000 euroa edeltävän 90
+                      päivän aikana.
+                    </p>
+                  </div>
+                </div>
+                <!-- Pricing 2 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>Taso 2</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,6%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi 10 001-100 000 euroa edeltävän 90
+                      päivän aikana.
+                    </p>
+                  </div>
+                </div>
+                <!-- Pricing 3 -->
+                <div class="pricing">
+                  <div class="pricing-title">
+                    <h3>Taso 3</h3>
+                  </div>
+                  <div class="pricing-dsc">
+                    <div>
+                      <h1>0,8%</h1>
+                      <p class="para-ex-small expense">Kaupankäynti kulu</p>
+                    </div>
+                    <p class="para-ex-small expense-detail">
+                      Kaupankäyntivolyymi 0-10 000 euroa edeltävän 90 päivän
+                      aikana.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section D -->
+    <section class="sectionD">
+        <div class="sectionD-content">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="3"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <h4>LAAJA VALIKOIMA KRYPTOVALUUTTOJ</h4>
+            <h2>Bitcoin (BTC), Ethereum (ETH) ja 160 muuta kryptovaluuttaa</h2>
+          </div>
+
+          <div class="logo-container">
+              <div class="scroll-container">
+                <div class="logo-row  fast-scroll">
+                  <!-- First set -->
+                  <div class="logo-wrap">
+                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                    <p class="logo-name">USD Coin</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Cardano</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                    <p class="logo-name">ChainLink</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">EOS</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Polygon</p>
+                  </div>
+                  <!-- Second set -->
+                  <div class="logo-wrap">
+                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                    <p class="logo-name">USD Coin</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Cardano</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                    <p class="logo-name">ChainLink</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">EOS</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Polygon</p>
+                  </div>
+                  <!-- Third set -->
+                  <div class="logo-wrap">
+                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                    <p class="logo-name">USD Coin</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Cardano</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                    <p class="logo-name">ChainLink</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">EOS</p>
+                  </div>
+                  <div class="logo-wrap">
+                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                    <p class="logo-name">Polygon</p>
+                  </div>
+                </div>
+              </div>
+            <!-- Row 1 -->
+            <div class="scroll-container">
+              <div class="logo-row  slow-scroll">
+                <!-- First set -->
+                <div class="logo-wrap">
+                  <img src="/assets/kusamaicon.png" alt="" class="logo-size">
+                  <p class="logo-name">Kusama</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Ethereum</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/polkadot.png" alt="" class="logo-size">
+                  <p class="logo-name">polkadot</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/dai-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">DAI</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/litecoin.jpg" alt="" class="logo-size">
+                  <p class="logo-name">Litecoin</p>
+                </div>
+                <!-- Second set -->
+                <div class="logo-wrap">
+                  <img src="/assets/kusamaicon.png" alt="" class="logo-size">
+                  <p class="logo-name">Kusama</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Ethereum</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/polkadot.png" alt="" class="logo-size">
+                  <p class="logo-name">polkadot</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/dai-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">DAI</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/litecoin.jpg" alt="" class="logo-size">
+                  <p class="logo-name">Litecoin</p>
+                </div>
+              </div>
+
+              </div>
+            <!-- </div> -->
+
+            <!-- Row 2 -->
+ <!-- Row 1 -->
+ <div class="scroll-container">
+  <div class="logo-row  fast-scroll">
+    <!-- First set -->
+    <div class="logo-wrap">
+      <img src="/assets/ethereum.png" alt="" class="logo-size">
+      <p class="logo-name">Ethereum</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Avalanche</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+      <p class="logo-name">Bitcoin</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Compound</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Cardano</p>
+    </div>
+    <!-- Second set -->
+    <div class="logo-wrap">
+      <img src="/assets/ethereum.png" alt="" class="logo-size">
+      <p class="logo-name">Ethereum</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Avalanche</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+      <p class="logo-name">Bitcoin</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Compound</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Cardano</p>
+    </div><div class="logo-wrap">
+      <img src="/assets/ethereum.png" alt="" class="logo-size">
+      <p class="logo-name">Ethereum</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Avalanche</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+      <p class="logo-name">Bitcoin</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Compound</p>
+    </div>
+    <div class="logo-wrap">
+      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+      <p class="logo-name">Cardano</p>
+    </div>
+   
+  </div>
+</div>
+            <!-- Row 3 -->
+            <div class="scroll-container">
+              <div class="logo-row  slow-scroll">               <!-- Logo 1 - Ethereum -->
+              <div class="logo-wrap">
+                <img src="/assets/stellar.png" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+              <!-- Logo 2 - Cardano -->
+              <div class="logo-wrap">
+                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+                <p class="logo-name">USD Coin</p>
+              </div>
+              <!-- Logo 3 - Compound -->
+              <div class="logo-wrap">
+                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Uniswap</p>
+              </div>
+              <!-- Logo 4 - Bitcoin -->
+              <div class="logo-wrap">
+                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Tezos</p>
+              </div>
+              <!-- Logo 5 - Avalanche -->
+              <!-- <div class="logo-wrap">
+                <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div> -->
+              <div class="logo-wrap">
+                <img src="/assets/stellar.png"  alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+              <!-- Logo 2 - Cardano -->
+              <div class="logo-wrap">
+                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+                <p class="logo-name">USD Coin</p>
+              </div>
+              <!-- Logo 3 - Compound -->
+              <div class="logo-wrap">
+                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Uniswap</p>
+              </div>
+              <!-- Logo 4 - Bitcoin -->
+              <div class="logo-wrap">
+                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Tezos</p>
+              </div>
+              <!-- Logo 5 - Avalanche -->
+              <div class="logo-wrap">
+                <img alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+              <!-- <div class="logo-wrap">
+                <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div> -->
+              <!-- Logo 2 - Cardano -->
+              <div class="logo-wrap">
+                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+                <p class="logo-name">USD Coin</p>
+              </div>
+              <!-- Logo 3 - Compound -->
+              <div class="logo-wrap">
+                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Uniswap</p>
+              </div>
+              <!-- Logo 4 - Bitcoin -->
+              <div class="logo-wrap">
+                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Tezos</p>
+              </div>
+              <!-- Logo 5 - Avalanche -->
+              <div class="logo-wrap">
+                <img ssrc="/assets/stellar.png" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/stellar.png" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+              <!-- Logo 2 - Cardano -->
+              <div class="logo-wrap">
+                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+                <p class="logo-name">USD Coin</p>
+              </div>
+              <!-- Logo 3 - Compound -->
+              <div class="logo-wrap">
+                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Uniswap</p>
+              </div>
+              <!-- Logo 4 - Bitcoin -->
+              <div class="logo-wrap">
+                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+                <p class="logo-name">Tezos</p>
+              </div>
+              <!-- Logo 5 - Avalanche -->
+              <div class="logo-wrap">
+                <img src="/assets/stellar.png" alt="" class="logo-size" />
+                <p class="logo-name">Stellar</p>
+              </div>
+            </div>
+
+            </div>
+          
+          </div>
+
+          <button class="btn margin-top btn-primary">Avaa ilmainen tili</button>
+        </div>
+    </section>
+    <!-- Section E  -->
+    <section class="sectionE">
+      <div class="container">
+        <div class="flex-row">
+          <div class="sectionE-content">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <h4 class="sectionE-heading">TURVALLINEN ja säännelty</h4>
+              <h1>Osta ja säilytä Bitcoinia turvallisesti</h1>
+            </div>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Suhtaudumme turvallisuuteen kokonaisvaltaisesti. Asiakkaidemme
+              varojen suojaaminen on korkein prioriteettimme. Noudatamme
+              toimialan korkeimpia compliance- ja turvallisuuskäytäntöjä.
+            </p>
+            <button
+              class="btn btn-primary"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Avaa tili ja aloita sijoittaminen
+            </button>
+          </div>
+          <div
+            class="sectionE-image-wrap"
+            data-aos="fade-up"
+            data-aos-delay="3"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="/assets/image3.webp" alt="" class="hero-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section G -->
+    <section class="sectionG">
+      <div class="container">
+        <div class="flex-row sectionG-wrap">
+          <div class="serial-num">
+            <div class="num-wrap active"><p class="para-ex-small">01</p></div>
+            <div class="num-wrap"><p class="para-ex-small">02</p></div>
+            <div class="num-wrap"><p class="para-ex-small">03</p></div>
+            <div class="num-wrap"><p class="para-ex-small">04</p></div>
+          </div>
+          <div class="testimonal-content">
+            <div
+              class="sectionG-heading"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <h4>KUUNTelemme ASIAKKAItamme</h4>
+              <h2>Mitä asiakkaamme sanovat meistä</h2>
+              <img src="/assets/invertedcomma.svg" alt="" />
+            </div>
+            <!-- testimonal 1 -->
+            <div class="sectionG-heading testimonal-wrap">
+              <p
+                class="para-small testimonal"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Valitsin Kvarnin, koska pidän heidän kryptovaluuttavalikoimasta,
+                edullisista kaupankäyntikuluista sekä hyvästä ja avoimesta
+                palvelusta asiakaspalvelusta. Säännölliset tapaamiset oman
+                varainhoitajan kanssa ja keskustelut markkinatilanteesta
+                auttavat minua arvioimaan sijoituksieni tilannetta ja tekemään
+                aktiivisesti muutoksia portfoliooni. <br />
+                Annan Kvarn X:lle arvosanan 10. Sijoitan kryptovaluuttoihin,
+                koska näen potentiaalia kryptosektorissa ja näin ollen myös
+                mahdollisuuksia kasvattaa sijoitussalkkuni tuottoja.
+              </p>
+              <h3
+                class="para-small name"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Mies 21v, ammattiurheilija
+              </h3>
+            </div>
+            <!-- testimonal 2-->
+            <div class="sectionG-heading testimonal-wrap">
+              <p
+                class="para-small testimonal"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Kvarn X tuli vastaan usealla some-alustalla, josta tutustuminen
+                hiljalleen lähti liikkeelle. Nopeasti kävi ilmi että taustalla
+                toimii alalla jo pitkään olleet ammattilaiset. Palvelun
+                kokonaisvaltaisuus ja turvallisuus olivat minulle
+                avaintekijöitä. Kirsikkana kakun päällä todella monipuolinen
+                tuotevalikoima. Sijoittajana olen pitkäjänteinen, osakepuolelta
+                90% siirtynyt kryptoihin. Uskon vahvasti digitalisaatioon ja
+                teknologiaan krypton taustalla. Kvarn X on täyden kympin
+                palvelu!
+              </p>
+              <h3
+                class="para-small name"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Joonas 34v, myyntiedustaja
+              </h3>
+            </div>
+            <!-- testimonal 3-->
+            <div class="sectionG-heading testimonal-wrap">
+              <p
+                class="para-small testimonal"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Hei, Vertailin eri krypto kaupankäynti alustojen valikoimaa ja
+                kuluja. Parhaita puolia palvelussa laajahko valikoima, pienet
+                kulut ja luotettavuus. Sijoittajana olen nykyisin
+                tuotto/-riskihakuinen. Sijoitan kryptoihin koska näen ne
+                tulevaisuuden omaisuuslajina, johon jokaisen sijoittajan
+                kannattaa tutustua. Myös tuottomahdollisuudet ovat
+                houkuttelevat. Yleisarvosana 8.
+              </p>
+              <h3
+                class="para-small name"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Mies 45v, ensihoitaja
+              </h3>
+            </div>
+            <!-- testimonal 4-->
+            <div class="sectionG-heading testimonal-wrap">
+              <p
+                class="para-small testimonal"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Yhteys tähän tuli kiinteistöpuolen tuttavan kautta ja alussa
+                olin hieman skeptinen ettei Suomessa oikeasti ole
+                krypto-osaajia. Informaatio mitä kryptoista saa, on suurelta
+                osin Suomen ulkopuolelta ja on samalla ohjannut, mitä palveluita
+                olen käyttänyt. Mikä on ollut minulle tärkeätä on se, että on
+                saanut henkilökohtaisen yhteyden ja tavata yrityksen edustajan.
+                Vaikka olen piensijoittaja, niin olen saanut henkilökohtaista
+                palvelua ja huomannut, että Kvarnilla on hyvä näkemys
+                kryptomarkkinoista. On myös tärkeätä, että on suomalainen
+                palveluntarjoaja, koska se helpottaa ns. fiat on-rampia sekä
+                raportointia verottajalle.
+              </p>
+              <h3
+                class="para-small name"
+                data-aos="fade-up"
+                data-aos-delay="3"
+                data-aos-duration="800"
+                data-aos-easing="ease-in-out"
+              >
+                Mies
+              </h3>
+            </div>
+
+            <div class="sectionG-heading">
+              <button class="btn btn-primary">
+                Avaa tili ja aloita sijoittaminen Bitcoiniin
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section F  -->
+    <section class="sectionF">
+      <div class="container">
+        <div class="flex-row">
+          <div
+            class="sectionF-heading"
+            data-aos="fade-up"
+            data-aos-delay="3"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <h2>Aloita sijoittaminen bitcoiniin jo tänään</h2>
+          </div>
+          <div class="sectionF-content">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Luo ilmainen Kvarn X -tili helposti ja turvallisesti
+              pankkitunnuksillasi ja tee ensimmäinen talletus.
+            </p>
+            <button class="btn btn-green">Luo tili ja osta bitcoinia</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section H -->
+    <section class="sectionH">
+      <div class="container">
+        <div>
+          <div
+            class="sectionH-heading"
+            data-aos="fade-up"
+            data-aos-delay="3"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <h4>UKK</h4>
+            <h2>Usein kysytyt kysymykset</h2>
+          </div>
+          <div>
+            <div
+              class="faq-flex"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="question">
+                <!-- question 1 -->
+                <div class="sectionH-FAQ">
+                  <div class="sectionH-FAQ-header">
+                    <h4>Miksi Bitcoin?</h4>
+                    <div class="plus-wrap">+</div>
+                    <div class="minus-wrap">-</div>
+                  </div>
+                  <div>
+                    <p class="para-small sectionH-answer">
+                      Bitcoin on korkean riskin sijoituskohde, jolle on
+                      tyypillistä korkea volatiliteetti. Ammattimaisesti
+                      laaditulla bitcoin osto -strategialla sekä
+                      sijoitushorisontti huomioiden bitcoiniin sijoittaminen
+                      tarjoaa kuitenkin houkuttelevan pitkän aikavälin
+                      riski-tuottosuhteen. Pitkällä aikavälillä sijoitus
+                      bitcoiniin on tyypillisesti voittanut muut sijoitusluokat
+                      tuotoissa. Bitcoinia voi ajatella myös inflaatiosuojana
+                      perinteisen, ns. fiat-valuutan arvon heikkenemistä
+                      vastaan. Sijoittamalla bitcoiniin sijoitat
+                      kryptovaluuttaan, jonka määrää mikään valtiollinen tai
+                      ei-valtiollinen taho ei voi keinotekoisesti lisätä.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="question">
+                <!-- question 2 -->
+                <div class="sectionH-FAQ">
+                  <div class="sectionH-FAQ-header">
+                    <h4>Miten bitcoinia verotetaan?</h4>
+                    <div class="plus-wrap">+</div>
+                    <div class="minus-wrap">-</div>
+                  </div>
+                  <div>
+                    <p class="para-small sectionH-answer">
+                      Toimialan kasvun myötä bitcoinin verotuskäytäntö on
+                      vakiintunut lähes kaikissa maissa viime vuosina. Suomessa
+                      bitcoinin verotuksessa noudatetaan Verohallinnon
+                      ohjeistusta vuodelta 2020. Bitcoinin käytöstä tai
+                      vaihtamisesta saatu tulo verotetaan luovutusvoittona, joka
+                      on pääomatuloa. Verotuskäytännöt voivat vaihdella eri
+                      maiden välillä, ja sinun tulisi aina konsultoida
+                      veroasiantuntijaa verotusasioissa. Huom: Kvarn ei anna
+                      veroneuvontaa. Mitään edellämainitusta ei tule pitää
+                      veroneuvontana tai yksilöllisenä verotukseen liittyvänä
+                      suosituksena. Ota yhteyttä veroasiantuntijaan omissa
+                      verotusasioissasi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="faq-flex"
+              data-aos="fade-up"
+              data-aos-delay="3"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              <div class="question">
+                <!-- question 3 -->
+                <div class="sectionH-FAQ">
+                  <div class="sectionH-FAQ-header">
+                    <h4>Tarvitsenko muita palveluita Kvarn X:n lisäksi??</h4>
+                    <div class="plus-wrap">+</div>
+                    <div class="minus-wrap">-</div>
+                  </div>
+                  <div>
+                    <p class="para-small sectionH-answer">
+                      Kvarn X tarjoaa kaikki tarvittavat palvelut bitcoinin
+                      ostamista varten. Toimimme oppaanasi bitcoin- ja
+                      kryptosijoittamisen maailmassa ja autamme sinua tekemään
+                      harkittuja ja pitkäjänteisiä sijoituspäätöksiä.
+                      Edistyksellisen digitaalisen alustamme ansiosta tarjoamme
+                      laajasti kryptosijoittamiseen liittyviä tuotteita ja
+                      palveluita, joilla voimme täyttää uuden sukupolven
+                      sijoittajien vaativatkin tarpeet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="question">
+                <!-- question 4 -->
+                <div class="sectionH-FAQ">
+                  <div class="sectionH-FAQ-header">
+                    <h4>Mikä on Bitcoin?</h4>
+                    <div class="plus-wrap">+</div>
+                    <div class="minus-wrap">-</div>
+                  </div>
+                  <div>
+                    <p class="para-small sectionH-answer">
+                      Bitcoin on ensimmäinen ja markkina-arvoltaan suurin
+                      kryptovaluutta. Bitcoin mahdollistaa maksamisen
+                      tuntemattomien osapuolten välillä ilman pankkeja tai muita
+                      välikäsiä. Bitcoinin liikkeellelasku on ohjelmallisesti
+                      ennalta määritetty, ja se puoliintuu neljän vuoden välein.
+                      Bitcoineja on tällä hetkellä noin 19,5 miljoonaa, ja
+                      niiden lopullinen kokonaismäärä tulee olemaan noin 21
+                      miljoonaa. Bitcoin syntyi vuonna 2009 ja sen
+                      kokonaismarkkina-arvo on tällä hetkellä (10/2024) noin
+                      1330 miljardia euroa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-wrap">
+        <div class="container">
+          <div>
+            <div>
+              <img src="/assets/logo.webp" alt="" class="footer-logo" />
+
+              <div class="link-wrap">
+                <div class="link-block">
+                  <img src="/assets/appstore.svg" alt="" />
+                  <p class="app-link-text">App Store</p>
+                </div>
+                <div class="link-block">
+                  <img src="/assets/playstore.svg" alt="" />
+                  <p class="app-link-text">Google Play</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-row">
+              <!-- list 1 -->
+              <div>
+                <h3>Palvelut</h3>
+                <ul>
+                  <li class="footer-links">Osta kryptoja</li>
+                  <li class="footer-links">Staking</li>
+                  <li class="footer-links">Kvarn X Pro</li>
+                </ul>
+              </div>
+              <!-- list 2 -->
+              <div>
+                <h3>Miksi Kvarn?</h3>
+                <ul>
+                  <li class="footer-links">Edullinen ja läpinäkyvä</li>
+                </ul>
+              </div>
+              <!-- list 3 -->
+              <div>
+                <h3>Opi ja oivalla</h3>
+                <ul>
+                  <li class="footer-links">Pulse</li>
+                  <li class="footer-links">Analyysit ja tutkimukset l</li>
+                  <li class="footer-links">Opi kryptoista</li>
+                  <li class="footer-links">Token-esitte</li>
+                  <li class="footer-links">Tiedotteet</li>
+                </ul>
+              </div>
+              <!-- list 4 -->
+              <div>
+                <h3>Yritys</h3>
+                <ul>
+                  <li class="footer-links">Meistä</li>
+                  <li class="footer-links">Tiimi</li>
+                  <li class="footer-links">Kumppanuusohjelma</li>
+                </ul>
+              </div>
+              <!-- list 5 -->
+              <div>
+                <h3>Tuki</h3>
+                <ul>
+                  <li class="footer-links">Hinnasto</li>
+                  <li class="footer-links">Ohjeet palvelun käyttöön</li>
+                  <li class="footer-links">Ota yhteyttä</li>
+                </ul>
+              </div>
+              <!-- list 6 -->
+              <div>
+                <h3>Ota yhteyttä</h3>
+                <ul>
+                  <li class="footer-links">
+                    <strong>team@kvarncapital.co</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <p class="para-ex-small footer-contact">
+                <strong>Kvarn Capital Oy |</strong> Eteläesplanadi 24 A | 00130
+                Helsinki | Y-tunnus: 3288803-2
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="last-section">
+      <div class="container">
+        <div class="flex-row">
+          <div>
+            <p class="para-xs-small">
+              Verkkosivut sisältävät yleistä tietoa Kvarn-konsernista ja sen
+              tuottamista palveluista. Verkkosivujen sisältämä aineisto on
+              tuotettu ainoastaan tiedonantotarkoituksessa, ellei erikseen ja
+              nimenomaisesti ole toisin ilmoitettu. Kvarn-konsernin käsityksen
+              mukaan kaikki verkkosivuilla esitetty aineisto on totuudenmukaista
+              ja oikein julkaisuhetkellä. Kvarn-konserni ei kuitenkaan takaa
+              tietojen oikeellisuutta eikä vastaa esitetyn aineiston
+              virheellisyydestä, puutteellisuudesta tai soveltumattomuudesta.
+              Mitään verkkosivujen kautta saatavaa informaatiota ei tule
+              käsittää tarjouksena tai kehotuksena tehdä mitään osto- tai
+              myyntipäätöksiä eikä muuksi kehotukseksi sijoitustoimenpiteisiin
+              mistään sijoituskohteesta. Henkilö tekee jokaisen
+              sijoituspäätöksensä itsenäisesti ja omalla vastuullaan.
+            </p>
+          </div>
+          <div>
+            <p class="para-xs-small">
+              Sijoituspäätös pohjautuu henkilön omiin selvityksiin ja arvioihin
+              yhtiöstä ja sijoituskohteista sekä sijoituspäätökseen liittyvistä
+              riskeistä. Sijoittajan tulee tarvittaessa konsultoida
+              sijoituspäätöksissään asianmukaisia tahoja. Kvarn-konserni ei
+              vastaa mistään taloudellisista menetyksistä tai välittömistä tai
+              välillisistä vahingoista, jotka saattavat seurata mistä tahansa
+              näillä sivuilla olevaan informaatioon perustuvista sijoitus- tai
+              muista päätöksistä. Kvarn-konserni ei ole muutenkaan vastuussa
+              mistään verkkosivujen käyttöön liittyvistä välillisistä
+              vahingoista, kuten tulon tai voiton menetyksestä tai muista
+              seurannaisvahingoista, ellei Kvarn-konserni ole aiheuttanut
+              vahinkoa törkeän huolimattomalla toiminnalla tai tahallisesti.
+            </p>
+          </div>
+        </div>
+        <div>
+          <ul class="footer-link-bottom">
+            <li>Tietosuojaseloste</li>
+            <li>Verkkosivuston yleiset käyttöehdot</li>
+            <li>Palvelun käyttöehdot</li>
+            <li>Staking-palvelun käyttöehdot</li>
+            <li>© Copyright Kvarn Capital Oy 2024</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // function toggleMenu() {
+      //   const menu = document.querySelector(".navbar .menu");
+      //   menu.classList.toggle("active");
+      // }
+      function toggleMenu() {
+        const menu = document.querySelector(".navbar .menu");
+        const toggleIcon = document.querySelector(".hamburger .toggle");
+        const crossIcon = document.querySelector(".hamburger .cross");
+
+        menu.classList.toggle("active");
+        toggleIcon.classList.toggle("hidden");
+        crossIcon.classList.toggle("hidden");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const headers = document.querySelectorAll(".sectionH-FAQ-header");
+
+        headers.forEach((header) => {
+          header.addEventListener("click", () => {
+            const parent = header.parentElement;
+            const paragraph = parent.querySelector(".sectionH-answer");
+            const plus = parent.querySelector(".plus-wrap");
+            const minus = parent.querySelector(".minus-wrap");
+
+            const isVisible = paragraph.classList.contains("show");
+
+            // Toggle the paragraph visibility
+            if (isVisible) {
+              paragraph.classList.remove("show");
+              plus.style.display = "block";
+              minus.style.display = "none";
+            } else {
+              paragraph.classList.add("show");
+              plus.style.display = "none";
+              minus.style.display = "block";
+            }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const testimonials = document.querySelectorAll(".testimonal-wrap");
+        const numbers = document.querySelectorAll(".num-wrap");
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+          testimonials.forEach((testimonial, i) => {
+            testimonial.style.display = i === index ? "block" : "none";
+          });
+          numbers.forEach((number, i) => {
+            number.classList.toggle("active", i === index);
+          });
+        }
+
+        function cycleTestimonials() {
+          showTestimonial(currentIndex);
+          currentIndex = (currentIndex + 1) % testimonials.length;
+        }
+
+        showTestimonial(currentIndex);
+        setInterval(cycleTestimonials, 5000);
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
