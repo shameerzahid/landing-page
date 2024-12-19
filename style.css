@@ -1,6 +1,7 @@
 * {
   /* outline: 2px solid red; */
 }
+
 :root {
   --text: #001811;
   --secondary: #90ffbc;
@@ -122,7 +123,7 @@ body {
     max-width: 1200px;
   }
 }
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .container {
     max-width: 1350px;
   }
@@ -131,7 +132,17 @@ body {
   .container {
     max-width: 1350px;
   }
-}
+} */
+ .wrap{
+  padding-top:80px;
+  padding-bottom: 80px;
+ }
+ @media screen and (max-width:640px) {
+  .wrap{
+    padding-top:50px;
+    padding-bottom: 50px;
+   }
+ }
 
 /* button */
 .btn {
@@ -384,11 +395,15 @@ body {
 .hero-image {
   width: 100%;
 }
+.hero-mobile{
+  display: none;
+}
 @media screen and (max-width: 992px) {
   .hero {
     height: auto;
+    padding-top: 90px;
   }
-  .hero-image-wrap,
+ 
   .hero-content {
     width: 50%;
     text-align: center;
@@ -397,16 +412,29 @@ body {
     align-items: center;
     justify-content: center;
   }
-}
-@media screen and (max-width: 768px) {
-  .hero-image-wrap,
-  .hero-content {
-    width: 80%;
+  .hero-image-wrap
+{
+    width: 60%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .hero-image {
+  display: none;
+  }
+  .hero-mobile{
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-image-wrap {
+    width: 100%;
+  }
+  .hero-content {
+    width: 80%;
   }
 }
 /* Section B*/
@@ -415,12 +443,15 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  padding-block: 100px;
+  /* padding-block: 100px; */
 }
 .sectionB-image-wrap,
 .sectionB-content {
   width: 30%;
   margin: auto;
+}
+.mobile-display{
+  display: none;
 }
 .sectionB-content {
   width: 50%;
@@ -462,9 +493,12 @@ body {
     padding-top: 50px;
     text-align: center;
   }
-  .sectionB-image-wrap,
+  
   .sectionB-content {
     width: 80%;
+  }
+  .sectionB-image-wrap{
+    display: none;
   }
   .sectionb-list {
     flex-direction: row !important;
@@ -479,17 +513,20 @@ body {
   .sectionH-answer {
     text-align: left;
   }
+  .sectionB .mobile-display{
+    display: block;
+  }
 }
 
 /* Section c */
 .sectionC {
   width: 100%;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   display: flex;
   align-items: flex-start;
 }
 .sectionC .pricing-card {
-  width: 50%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,6 +596,7 @@ h4 {
 }
 .sectionC .expense {
   text-transform: uppercase;
+  letter-spacing: 2px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -571,7 +609,7 @@ h4 {
 }
 
 .scetionC-contentwrap {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 /* .sectionC-image{
@@ -580,12 +618,15 @@ h4 {
 } */
 .pricing-image {
   position: absolute;
-  top: -80px;
-  left: 37px;
-  width: 80%;
+  top: -95px;
+  left: 5px;
+  width: 100%;
 }
 .sectionC-heading {
   text-transform: uppercase;
+}
+.pricing-plan .flex-row {
+  align-items: flex-start;
 }
 @media screen and (max-width: 1280px) {
   .pricing-plan .flex-row {
@@ -593,6 +634,7 @@ h4 {
   }
 }
 @media screen and (max-width: 992px) {
+
   .sectionC .flex-row {
     gap: 20px;
   }
@@ -610,6 +652,16 @@ h4 {
   .scetionC-contentwrap {
     width: 80%;
   }
+  .sectionC .pricing-title {
+   
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .sectionC .pricing h1 {
+font-size: 55px!important;
+  }
 }
 
 /* section D */
@@ -620,7 +672,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   background-color: #f0fef4;
-  padding: 50px 0px;
+  /* padding: 50px 0px; */
 }
 .sectionD-content {
   text-align: center;
@@ -759,11 +811,16 @@ h4 {
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
-.sectionE-image-wrap,
+
 .sectionE-content {
   width: 30%;
+  margin: auto;
+}
+.sectionE-image-wrap
+{
+  width: 40%;
   margin: auto;
 }
 .sectionE-content {
@@ -776,6 +833,10 @@ h4 {
 .sectionE-heading {
   text-transform: uppercase;
 }
+.mobile-display{
+display: none;
+}
+
 @media screen and (max-width: 992px) {
   .sectionE {
     height: auto;
@@ -784,8 +845,14 @@ h4 {
     gap: 20px;
   }
   .sectionE-image-wrap {
-    width: 50%;
+    display: none;
   }
+  .mobile-display{
+    display: block;
+    width: 90%;
+    margin: auto;
+    
+    }
   .sectionE-content {
     width: 80%;
     display: flex;
@@ -795,6 +862,7 @@ h4 {
     text-align: center;
   }
 }
+
 
 /* section F */
 .sectionF {
@@ -839,7 +907,7 @@ h4 {
 }
 /* section G */
 .sectionG {
-  height: 100vh;
+  height: 80vh;
   background-image: url("/assets/testimonalbg.webp");
   background-position: center;
   background-size: 100% 100%;
@@ -852,8 +920,9 @@ h4 {
   margin: auto;
 }
 .sectionG-wrap {
-  width: 70%;
-  margin: auto;
+  width: 80%;
+margin: auto;
+
 }
 .sectionG-heading h4 {
   text-transform: uppercase;
@@ -931,7 +1000,7 @@ h4 {
 }
 /* section H */
 .sectionH {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   width: 100%;
@@ -968,18 +1037,21 @@ h4 {
   width: 50%;
 }
 
+
 .sectionH-answer {
+  margin: 0;
+  padding: 0;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  display: block;
   transition: max-height 0.8s linear, opacity 0.8s ease;
 }
 
 .sectionH-answer.show {
-  max-height: 500px;
+  max-height: 500px; 
   opacity: 1;
 }
+
 
 .sectionH-FAQ-header {
   display: flex;
@@ -987,6 +1059,7 @@ h4 {
   justify-content: space-between;
   cursor: pointer;
   height: 42px;
+  text-align: left;
 }
 
 .sectionH-FAQ-header .plus-wrap {
@@ -1030,6 +1103,13 @@ h4 {
   padding: 10px 16px;
   padding-top: 50px;
   background-color: #d9d9d926;
+}
+.flex-wrap{
+display: flex;
+/* flex-wrap: wrap; */
+/* gap: 40px; */
+justify-content: space-between;
+margin-block: 20px;
 }
 .footer-logo {
   width: 15%;
@@ -1122,6 +1202,13 @@ h4 {
   text-decoration: none;
   cursor: pointer;
 }
+@media screen and (max-width:1024px) {
+  .flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    }
+}
 @media screen and (max-width: 992px) {
   .footer-link-bottom {
     display: flex;
@@ -1137,4 +1224,5 @@ h4 {
   .footer-contact {
     width: 80%;
   }
+  
 }

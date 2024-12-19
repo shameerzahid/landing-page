@@ -8,90 +8,90 @@
     <title>Bitcoin</title>
   </head>
   <style>
-   .logo-container {
-  width: 100%;
-  overflow: hidden;
-  /* background: #fff; */
-  padding: 20px 0;
-}
+    .logo-container {
+      width: 100%;
+      overflow: hidden;
+      /* background: #fff; */
+      padding: 20px 0;
+    }
 
-.scroll-container {
-  display: flex;
-  overflow: hidden;
-  margin: 20px 0;
-  position: relative;
-  width: 100%;
-}
+    .scroll-container {
+      display: flex;
+      overflow: hidden;
+      margin: 20px 0;
+      position: relative;
+      width: 100%;
+    }
 
-.logo-row {
-  display: flex;
-  gap: 8px;
-  padding-left: 20px;
-  animation: scroll 20s linear infinite;
-  width: max-content;
-}
+    .logo-row {
+      display: flex;
+      gap: 8px;
+      padding-left: 20px;
+      animation: scroll 20s linear infinite;
+      width: max-content;
+    }
 
-.logo-wrap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  border: 1px solid white;
-  /* padding: 10px; */
-  /* min-width: 100px; */
-}
+    .logo-wrap {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid white;
+      /* padding: 10px; */
+      /* min-width: 100px; */
+    }
 
-.logo-size {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
+    .logo-size {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
 
-.logo-name {
-  /* margin-top: 5px; */
-  font-size: 14px;
-  color: #666;
-}
+    .logo-name {
+      /* margin-top: 5px; */
+      font-size: 14px;
+      color: #666;
+    }
 
-.fast-scroll {
-  animation-duration: 24s;
-}
+    .fast-scroll {
+      animation-duration: 24s;
+    }
 
-.slow-scroll {
-  animation-duration: 50s;
-}
+    .slow-scroll {
+      animation-duration: 50s;
+    }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(calc(-100% / 3));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@media screen and (max-width: 600px) {
-  .logo-size {
-  width: 14px !important;
-  height: 14px !important;
-  object-fit: contain;
-}
+    @keyframes scroll {
+      0% {
+        transform: translateX(calc(-100% / 3));
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .logo-size {
+        width: 14px !important;
+        height: 14px !important;
+        object-fit: contain;
+      }
 
-.logo-name {
-  /* margin-top: 5px; */
-  font-size: 8px !important;
-  color: #666;
-}
-}
+      .logo-name {
+        /* margin-top: 5px; */
+        font-size: 8px !important;
+        color: #666;
+      }
+    }
   </style>
-   <script>
+  <script>
     function setupInfiniteScroll() {
-      const rows = document.querySelectorAll('.logo-row');
-      
-      rows.forEach(row => {
+      const rows = document.querySelectorAll(".logo-row");
+
+      rows.forEach((row) => {
         // When animation ends, instantly reset to start
-        row.addEventListener('animationend', () => {
-          row.style.animation = 'none';
+        row.addEventListener("animationend", () => {
+          row.style.animation = "none";
           row.offsetHeight; // Trigger reflow
           row.style.animation = null;
         });
@@ -103,17 +103,17 @@
   <body>
     <script>
       function setupInfiniteScroll() {
-        const rows = document.querySelectorAll('.logo-row');
-        
-        rows.forEach(row => {
-          row.addEventListener('animationend', () => {
-            row.style.animation = 'none';
+        const rows = document.querySelectorAll(".logo-row");
+
+        rows.forEach((row) => {
+          row.addEventListener("animationend", () => {
+            row.style.animation = "none";
             row.offsetHeight; // Trigger reflow
             row.style.animation = null;
           });
         });
       }
-  
+
       setupInfiniteScroll();
     </script>
     <!-- Navbar -->
@@ -150,15 +150,10 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <div
-          class="flex-row"
-          data-aos="fade-up"
-          data-aos-delay="3"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-out"
-        >
+        <div class="flex-row">
           <div class="hero-image-wrap">
             <img src="/assets/heroImage.webp" alt="" class="hero-image" />
+            <img src="/assets/hero-mobile.webp" alt="" class="hero-mobile" />
           </div>
           <div class="hero-content">
             <h1>
@@ -172,60 +167,27 @@
               <strong>Välityspalkkiomme on Suomen matalin</strong> ja
               rekisteröityminen pankkitunnuksilla on nopeaa ja ilmaista.
             </p>
-            <button
-              class="btn btn-primary"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
-              Avaa ilmainen tili!
-            </button>
+            <button class="btn btn-primary">Avaa ilmainen tili!</button>
           </div>
         </div>
       </div>
     </section>
     <!-- Section B -->
-    <section class="sectionB">
+    <section class="wrap sectionB">
       <div class="container">
         <div class="flex-row">
           <div class="sectionB-content">
-            <h4
-              class="sectionB-heading"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
-              Miksi kvarn X?
-            </h4>
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
-              Bitcoin-sijoittajan luotettava kumppani
-            </h1>
+            <h4 class="sectionB-heading">Miksi kvarn X?</h4>
+            <h1>Bitcoin-sijoittajan luotettava kumppani</h1>
+            <div class="mobile-display">
+              <img src="/assets/image1.webp" alt="" class="hero-image" />
+            </div>
             <button class="btn btn-primary">Avaa ilmainen tili tästä</button>
-            <span
-              class="sectionb-list flex-row gap"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <span class="sectionb-list flex-row gap">
               <img src="/assets/icon.svg" alt="" />
               <h5>Katso esittelyvideo</h5>
             </span>
-            <div
-              class="faq"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div class="faq">
               <!-- question 1 -->
               <div class="sectionH-FAQ">
                 <div class="sectionH-FAQ-header">
@@ -288,20 +250,14 @@
               </div>
             </div>
           </div>
-          <div
-            class="sectionB-image-wrap"
-            data-aos="fade-up"
-            data-aos-delay="3"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
+          <div class="sectionB-image-wrap">
             <img src="/assets/image1.webp" alt="" class="hero-image" />
           </div>
         </div>
       </div>
     </section>
     <!-- Section C -->
-    <section class="sectionC">
+    <section class="wrap sectionC">
       <div class="container">
         <div class="flex-row">
           <div class="pricing-card">
@@ -444,352 +400,333 @@
     </section>
     <!-- Section D -->
     <section class="sectionD">
-        <div class="sectionD-content">
-          <div
-            data-aos="fade-up"
-            data-aos-delay="3"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            <h4>LAAJA VALIKOIMA KRYPTOVALUUTTOJ</h4>
-            <h2>Bitcoin (BTC), Ethereum (ETH) ja 160 muuta kryptovaluuttaa</h2>
-          </div>
+      <div class="sectionD-content">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="3"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
+          <h4>LAAJA VALIKOIMA KRYPTOVALUUTTOJ</h4>
+          <h2>Bitcoin (BTC), Ethereum (ETH) ja 160 muuta kryptovaluuttaa</h2>
+        </div>
 
-          <div class="logo-container">
-              <div class="scroll-container">
-                <div class="logo-row  fast-scroll">
-                  <!-- First set -->
-                  <div class="logo-wrap">
-                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
-                    <p class="logo-name">USD Coin</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Cardano</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
-                    <p class="logo-name">ChainLink</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">EOS</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Polygon</p>
-                  </div>
-                  <!-- Second set -->
-                  <div class="logo-wrap">
-                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
-                    <p class="logo-name">USD Coin</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Cardano</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
-                    <p class="logo-name">ChainLink</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">EOS</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Polygon</p>
-                  </div>
-                  <!-- Third set -->
-                  <div class="logo-wrap">
-                    <img src="/assets/usd-coin.webp" alt="" class="logo-size">
-                    <p class="logo-name">USD Coin</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Cardano</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/chainlink.webp" alt="" class="logo-size">
-                    <p class="logo-name">ChainLink</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/eos-logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">EOS</p>
-                  </div>
-                  <div class="logo-wrap">
-                    <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
-                    <p class="logo-name">Polygon</p>
-                  </div>
-                </div>
-              </div>
-            <!-- Row 1 -->
+        <div class="logo-container">
             <div class="scroll-container">
-              <div class="logo-row  slow-scroll">
+              <div class="logo-row  fast-scroll">
                 <!-- First set -->
                 <div class="logo-wrap">
-                  <img src="/assets/kusamaicon.png" alt="" class="logo-size">
-                  <p class="logo-name">Kusama</p>
+                  <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                  <p class="logo-name">USD Coin</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
-                  <p class="logo-name">Ethereum</p>
+                  <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Cardano</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/polkadot.png" alt="" class="logo-size">
-                  <p class="logo-name">polkadot</p>
+                  <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                  <p class="logo-name">ChainLink</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/dai-logo.webp" alt="" class="logo-size">
-                  <p class="logo-name">DAI</p>
+                  <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">EOS</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/litecoin.jpg" alt="" class="logo-size">
-                  <p class="logo-name">Litecoin</p>
+                  <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Polygon</p>
                 </div>
                 <!-- Second set -->
                 <div class="logo-wrap">
-                  <img src="/assets/kusamaicon.png" alt="" class="logo-size">
-                  <p class="logo-name">Kusama</p>
+                  <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                  <p class="logo-name">USD Coin</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
-                  <p class="logo-name">Ethereum</p>
+                  <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Cardano</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/polkadot.png" alt="" class="logo-size">
-                  <p class="logo-name">polkadot</p>
+                  <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                  <p class="logo-name">ChainLink</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/dai-logo.webp" alt="" class="logo-size">
-                  <p class="logo-name">DAI</p>
+                  <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">EOS</p>
                 </div>
                 <div class="logo-wrap">
-                  <img src="/assets/litecoin.jpg" alt="" class="logo-size">
-                  <p class="logo-name">Litecoin</p>
+                  <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Polygon</p>
+                </div>
+                <!-- Third set -->
+                <div class="logo-wrap">
+                  <img src="/assets/usd-coin.webp" alt="" class="logo-size">
+                  <p class="logo-name">USD Coin</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Cardano</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/chainlink.webp" alt="" class="logo-size">
+                  <p class="logo-name">ChainLink</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/eos-logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">EOS</p>
+                </div>
+                <div class="logo-wrap">
+                  <img src="/assets/Polygon-Logo.webp" alt="" class="logo-size">
+                  <p class="logo-name">Polygon</p>
                 </div>
               </div>
-
+            </div>
+          <!-- Row 1 -->
+          <div class="scroll-container">
+            <div class="logo-row  slow-scroll">
+              <!-- First set -->
+              <div class="logo-wrap">
+                <img src="/assets/kusamaicon.png" alt="" class="logo-size">
+                <p class="logo-name">Kusama</p>
               </div>
-            <!-- </div> -->
+              <div class="logo-wrap">
+                <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
+                <p class="logo-name">Ethereum</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/polkadot.png" alt="" class="logo-size">
+                <p class="logo-name">polkadot</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/dai-logo.webp" alt="" class="logo-size">
+                <p class="logo-name">DAI</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/litecoin.jpg" alt="" class="logo-size">
+                <p class="logo-name">Litecoin</p>
+              </div>
+              <!-- Second set -->
+              <div class="logo-wrap">
+                <img src="/assets/kusamaicon.png" alt="" class="logo-size">
+                <p class="logo-name">Kusama</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/Ethereum-logo.webp" alt="" class="logo-size">
+                <p class="logo-name">Ethereum</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/polkadot.png" alt="" class="logo-size">
+                <p class="logo-name">polkadot</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/dai-logo.webp" alt="" class="logo-size">
+                <p class="logo-name">DAI</p>
+              </div>
+              <div class="logo-wrap">
+                <img src="/assets/litecoin.jpg" alt="" class="logo-size">
+                <p class="logo-name">Litecoin</p>
+              </div>
+            </div>
 
-            <!-- Row 2 -->
- <!-- Row 1 -->
- <div class="scroll-container">
-  <div class="logo-row  fast-scroll">
-    <!-- First set -->
-    <div class="logo-wrap">
-      <img src="/assets/ethereum.png" alt="" class="logo-size">
-      <p class="logo-name">Ethereum</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Avalanche</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
-      <p class="logo-name">Bitcoin</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Compound</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Cardano</p>
-    </div>
-    <!-- Second set -->
-    <div class="logo-wrap">
-      <img src="/assets/ethereum.png" alt="" class="logo-size">
-      <p class="logo-name">Ethereum</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Avalanche</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
-      <p class="logo-name">Bitcoin</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Compound</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Cardano</p>
-    </div><div class="logo-wrap">
-      <img src="/assets/ethereum.png" alt="" class="logo-size">
-      <p class="logo-name">Ethereum</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Avalanche</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
-      <p class="logo-name">Bitcoin</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/compound-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Compound</p>
-    </div>
-    <div class="logo-wrap">
-      <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
-      <p class="logo-name">Cardano</p>
-    </div>
-   
+            </div>
+          <!-- </div> -->
+
+          <!-- Row 2 -->
+<!-- Row 1 -->
+<div class="scroll-container">
+<div class="logo-row  fast-scroll">
+  <!-- First set -->
+  <div class="logo-wrap">
+    <img src="/assets/ethereum.png" alt="" class="logo-size">
+    <p class="logo-name">Ethereum</p>
   </div>
+  <div class="logo-wrap">
+    <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Avalanche</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+    <p class="logo-name">Bitcoin</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Compound</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Cardano</p>
+  </div>
+  <!-- Second set -->
+  <div class="logo-wrap">
+    <img src="/assets/ethereum.png" alt="" class="logo-size">
+    <p class="logo-name">Ethereum</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Avalanche</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+    <p class="logo-name">Bitcoin</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Compound</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Cardano</p>
+  </div><div class="logo-wrap">
+    <img src="/assets/ethereum.png" alt="" class="logo-size">
+    <p class="logo-name">Ethereum</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/Avalanche-Logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Avalanche</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/Bitcoin-Logo.png" alt="" class="logo-size">
+    <p class="logo-name">Bitcoin</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/compound-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Compound</p>
+  </div>
+  <div class="logo-wrap">
+    <img src="/assets/cardano-logo.webp" alt="" class="logo-size">
+    <p class="logo-name">Cardano</p>
+  </div>
+ 
 </div>
-            <!-- Row 3 -->
-            <div class="scroll-container">
-              <div class="logo-row  slow-scroll">               <!-- Logo 1 - Ethereum -->
-              <div class="logo-wrap">
-                <img src="/assets/stellar.png" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
-              <!-- Logo 2 - Cardano -->
-              <div class="logo-wrap">
-                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
-                <p class="logo-name">USD Coin</p>
-              </div>
-              <!-- Logo 3 - Compound -->
-              <div class="logo-wrap">
-                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Uniswap</p>
-              </div>
-              <!-- Logo 4 - Bitcoin -->
-              <div class="logo-wrap">
-                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Tezos</p>
-              </div>
-              <!-- Logo 5 - Avalanche -->
-              <!-- <div class="logo-wrap">
-                <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div> -->
-              <div class="logo-wrap">
-                <img src="/assets/stellar.png"  alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
-              <!-- Logo 2 - Cardano -->
-              <div class="logo-wrap">
-                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
-                <p class="logo-name">USD Coin</p>
-              </div>
-              <!-- Logo 3 - Compound -->
-              <div class="logo-wrap">
-                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Uniswap</p>
-              </div>
-              <!-- Logo 4 - Bitcoin -->
-              <div class="logo-wrap">
-                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Tezos</p>
-              </div>
-              <!-- Logo 5 - Avalanche -->
-              <div class="logo-wrap">
-                <img alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
-              <!-- <div class="logo-wrap">
-                <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div> -->
-              <!-- Logo 2 - Cardano -->
-              <div class="logo-wrap">
-                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
-                <p class="logo-name">USD Coin</p>
-              </div>
-              <!-- Logo 3 - Compound -->
-              <div class="logo-wrap">
-                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Uniswap</p>
-              </div>
-              <!-- Logo 4 - Bitcoin -->
-              <div class="logo-wrap">
-                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Tezos</p>
-              </div>
-              <!-- Logo 5 - Avalanche -->
-              <div class="logo-wrap">
-                <img ssrc="/assets/stellar.png" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
-              <div class="logo-wrap">
-                <img src="/assets/stellar.png" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
-              <!-- Logo 2 - Cardano -->
-              <div class="logo-wrap">
-                <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
-                <p class="logo-name">USD Coin</p>
-              </div>
-              <!-- Logo 3 - Compound -->
-              <div class="logo-wrap">
-                <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Uniswap</p>
-              </div>
-              <!-- Logo 4 - Bitcoin -->
-              <div class="logo-wrap">
-                <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
-                <p class="logo-name">Tezos</p>
-              </div>
-              <!-- Logo 5 - Avalanche -->
-              <div class="logo-wrap">
-                <img src="/assets/stellar.png" alt="" class="logo-size" />
-                <p class="logo-name">Stellar</p>
-              </div>
+</div>
+          <!-- Row 3 -->
+          <div class="scroll-container">
+            <div class="logo-row  slow-scroll">               <!-- Logo 1 - Ethereum -->
+            <div class="logo-wrap">
+              <img src="/assets/stellar.png" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
             </div>
-
+            <!-- Logo 2 - Cardano -->
+            <div class="logo-wrap">
+              <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+              <p class="logo-name">USD Coin</p>
             </div>
-          
+            <!-- Logo 3 - Compound -->
+            <div class="logo-wrap">
+              <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Uniswap</p>
+            </div>
+            <!-- Logo 4 - Bitcoin -->
+            <div class="logo-wrap">
+              <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Tezos</p>
+            </div>
+            <!-- Logo 5 - Avalanche -->
+            <!-- <div class="logo-wrap">
+              <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div> -->
+            <div class="logo-wrap">
+              <img src="/assets/stellar.png"  alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div>
+            <!-- Logo 2 - Cardano -->
+            <div class="logo-wrap">
+              <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+              <p class="logo-name">USD Coin</p>
+            </div>
+            <!-- Logo 3 - Compound -->
+            <div class="logo-wrap">
+              <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Uniswap</p>
+            </div>
+            <!-- Logo 4 - Bitcoin -->
+            <div class="logo-wrap">
+              <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Tezos</p>
+            </div>
+            <!-- Logo 5 - Avalanche -->
+            <div class="logo-wrap">
+              <img alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div>
+            <!-- <div class="logo-wrap">
+              <img src="/assets/stellar-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div> -->
+            <!-- Logo 2 - Cardano -->
+            <div class="logo-wrap">
+              <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+              <p class="logo-name">USD Coin</p>
+            </div>
+            <!-- Logo 3 - Compound -->
+            <div class="logo-wrap">
+              <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Uniswap</p>
+            </div>
+            <!-- Logo 4 - Bitcoin -->
+            <div class="logo-wrap">
+              <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Tezos</p>
+            </div>
+            <!-- Logo 5 - Avalanche -->
+            <div class="logo-wrap">
+              <img ssrc="/assets/stellar.png" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div>
+            <div class="logo-wrap">
+              <img src="/assets/stellar.png" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div>
+            <!-- Logo 2 - Cardano -->
+            <div class="logo-wrap">
+              <img src="/assets/usd-coin.webp" alt="" class="logo-size" />
+              <p class="logo-name">USD Coin</p>
+            </div>
+            <!-- Logo 3 - Compound -->
+            <div class="logo-wrap">
+              <img src="/assets/uniswap-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Uniswap</p>
+            </div>
+            <!-- Logo 4 - Bitcoin -->
+            <div class="logo-wrap">
+              <img src="/assets/tezos-logo.webp" alt="" class="logo-size" />
+              <p class="logo-name">Tezos</p>
+            </div>
+            <!-- Logo 5 - Avalanche -->
+            <div class="logo-wrap">
+              <img src="/assets/stellar.png" alt="" class="logo-size" />
+              <p class="logo-name">Stellar</p>
+            </div>
           </div>
 
-          <button class="btn margin-top btn-primary">Avaa ilmainen tili</button>
+          </div>
+        
         </div>
-    </section>
+
+        <button class="btn margin-top btn-primary">Avaa ilmainen tili</button>
+      </div>
+  </section>
     <!-- Section E  -->
-    <section class="sectionE">
+    <section class="wrap sectionE">
       <div class="container">
         <div class="flex-row">
           <div class="sectionE-content">
-            <div
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div>
               <h4 class="sectionE-heading">TURVALLINEN ja säännelty</h4>
               <h1>Osta ja säilytä Bitcoinia turvallisesti</h1>
             </div>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div class="mobile-display">
+              <img src="/assets/image3.webp" alt="" class="hero-image" />
+            </div>
+            <p>
               Suhtaudumme turvallisuuteen kokonaisvaltaisesti. Asiakkaidemme
               varojen suojaaminen on korkein prioriteettimme. Noudatamme
               toimialan korkeimpia compliance- ja turvallisuuskäytäntöjä.
             </p>
-            <button
-              class="btn btn-primary"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <button class="btn btn-primary">
               Avaa tili ja aloita sijoittaminen
             </button>
           </div>
-          <div
-            class="sectionE-image-wrap"
-            data-aos="fade-up"
-            data-aos-delay="3"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
+          <div class="sectionE-image-wrap">
             <img src="/assets/image3.webp" alt="" class="hero-image" />
           </div>
         </div>
@@ -806,26 +743,14 @@
             <div class="num-wrap"><p class="para-ex-small">04</p></div>
           </div>
           <div class="testimonal-content">
-            <div
-              class="sectionG-heading"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div class="sectionG-heading">
               <h4>KUUNTelemme ASIAKKAItamme</h4>
               <h2>Mitä asiakkaamme sanovat meistä</h2>
               <img src="/assets/invertedcomma.svg" alt="" />
             </div>
             <!-- testimonal 1 -->
             <div class="sectionG-heading testimonal-wrap">
-              <p
-                class="para-small testimonal"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
+              <p class="para-small testimonal">
                 Valitsin Kvarnin, koska pidän heidän kryptovaluuttavalikoimasta,
                 edullisista kaupankäyntikuluista sekä hyvästä ja avoimesta
                 palvelusta asiakaspalvelusta. Säännölliset tapaamiset oman
@@ -836,25 +761,11 @@
                 koska näen potentiaalia kryptosektorissa ja näin ollen myös
                 mahdollisuuksia kasvattaa sijoitussalkkuni tuottoja.
               </p>
-              <h3
-                class="para-small name"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
-                Mies 21v, ammattiurheilija
-              </h3>
+              <h3 class="para-small name">Mies 21v, ammattiurheilija</h3>
             </div>
             <!-- testimonal 2-->
             <div class="sectionG-heading testimonal-wrap">
-              <p
-                class="para-small testimonal"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
+              <p class="para-small testimonal">
                 Kvarn X tuli vastaan usealla some-alustalla, josta tutustuminen
                 hiljalleen lähti liikkeelle. Nopeasti kävi ilmi että taustalla
                 toimii alalla jo pitkään olleet ammattilaiset. Palvelun
@@ -865,25 +776,11 @@
                 teknologiaan krypton taustalla. Kvarn X on täyden kympin
                 palvelu!
               </p>
-              <h3
-                class="para-small name"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
-                Joonas 34v, myyntiedustaja
-              </h3>
+              <h3 class="para-small name">Joonas 34v, myyntiedustaja</h3>
             </div>
             <!-- testimonal 3-->
             <div class="sectionG-heading testimonal-wrap">
-              <p
-                class="para-small testimonal"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
+              <p class="para-small testimonal">
                 Hei, Vertailin eri krypto kaupankäynti alustojen valikoimaa ja
                 kuluja. Parhaita puolia palvelussa laajahko valikoima, pienet
                 kulut ja luotettavuus. Sijoittajana olen nykyisin
@@ -892,25 +789,11 @@
                 kannattaa tutustua. Myös tuottomahdollisuudet ovat
                 houkuttelevat. Yleisarvosana 8.
               </p>
-              <h3
-                class="para-small name"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
-                Mies 45v, ensihoitaja
-              </h3>
+              <h3 class="para-small name">Mies 45v, ensihoitaja</h3>
             </div>
             <!-- testimonal 4-->
             <div class="sectionG-heading testimonal-wrap">
-              <p
-                class="para-small testimonal"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
+              <p class="para-small testimonal">
                 Yhteys tähän tuli kiinteistöpuolen tuttavan kautta ja alussa
                 olin hieman skeptinen ettei Suomessa oikeasti ole
                 krypto-osaajia. Informaatio mitä kryptoista saa, on suurelta
@@ -923,15 +806,7 @@
                 palveluntarjoaja, koska se helpottaa ns. fiat on-rampia sekä
                 raportointia verottajalle.
               </p>
-              <h3
-                class="para-small name"
-                data-aos="fade-up"
-                data-aos-delay="3"
-                data-aos-duration="800"
-                data-aos-easing="ease-in-out"
-              >
-                Mies
-              </h3>
+              <h3 class="para-small name">Mies</h3>
             </div>
 
             <div class="sectionG-heading">
@@ -947,22 +822,11 @@
     <section class="sectionF">
       <div class="container">
         <div class="flex-row">
-          <div
-            class="sectionF-heading"
-            data-aos="fade-up"
-            data-aos-delay="3"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
+          <div class="sectionF-heading">
             <h2>Aloita sijoittaminen bitcoiniin jo tänään</h2>
           </div>
           <div class="sectionF-content">
-            <p
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <p>
               Luo ilmainen Kvarn X -tili helposti ja turvallisesti
               pankkitunnuksillasi ja tee ensimmäinen talletus.
             </p>
@@ -973,27 +837,15 @@
     </section>
 
     <!-- Section H -->
-    <section class="sectionH">
+    <section class="wrap sectionH">
       <div class="container">
         <div>
-          <div
-            class="sectionH-heading"
-            data-aos="fade-up"
-            data-aos-delay="3"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
+          <div class="sectionH-heading">
             <h4>UKK</h4>
             <h2>Usein kysytyt kysymykset</h2>
           </div>
           <div>
-            <div
-              class="faq-flex"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div class="faq-flex">
               <div class="question">
                 <!-- question 1 -->
                 <div class="sectionH-FAQ">
@@ -1047,13 +899,7 @@
                 </div>
               </div>
             </div>
-            <div
-              class="faq-flex"
-              data-aos="fade-up"
-              data-aos-delay="3"
-              data-aos-duration="800"
-              data-aos-easing="ease-in-out"
-            >
+            <div class="faq-flex">
               <div class="question">
                 <!-- question 3 -->
                 <div class="sectionH-FAQ">
@@ -1112,7 +958,6 @@
           <div>
             <div>
               <img src="/assets/logo.webp" alt="" class="footer-logo" />
-
               <div class="link-wrap">
                 <div class="link-block">
                   <img src="/assets/appstore.svg" alt="" />
@@ -1124,7 +969,7 @@
                 </div>
               </div>
             </div>
-            <div class="flex-row">
+            <div class="flex-wrap">
               <!-- list 1 -->
               <div>
                 <h3>Palvelut</h3>
